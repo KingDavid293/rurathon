@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Testing</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="./js/jQuery.js"></script>
+        <script src="./js/jquery.cookie.js"></script>
+        <script src="./js/index.js"></script>
+    </head>
+    <body>
+        <div class="maincontainer">
+            <div class="signupContainer" id="signUpContainer">
+                <div class="formcontainer">
+                    <div class="signUpHeadingContainer"><h1>SIGN UP</h1></div>
+                    <div class="Txt-input-container"><input class="Txt-input" type="text" id="vol_username" placeholder="USERNAME"></div>
+                    <div class="Txt-input-container"><input class="Txt-input" type="password" id="vol_password" placeholder="Password"></div>
+                    <div class="Txt-input-container"><input class="Txt-input" type="email" id="vol_emailId" placeholder="Email ID"></div>
+                    <div class="Txt-input-container"><input class="Txt-input" type="text" id="vol_name" placeholder="Full Name Of user"></div>
+                    <button class="btn-submit" id="SignUpSubmit">Sigh up</button>
+
+                    <a href="#" id="movetoLoginPageFronSignUp">Login</a>
+                </div>
+            </div>
+
+            <div class="signUp-loginTransission noDisplay" id="signUp-loginTransission">
+                <h1>account has been created</h1>
+                <a href="#" id="movetoLoginPage">Login</a>
+            </div>
+            <div class="loginContainer noDisplay" id="loginContainer">
+                    <div class="formcontainer">
+                            <div class="signUpHeadingContainer"><h1>Login</h1></div>
+                            <div class="Txt-input-container"><input class="Txt-input" type="email" id="vol_Login_emailId" placeholder="Email"></div>
+                            <div class="Txt-input-container"><input class="Txt-input" type="password" id="vol_Login_password" placeholder="Password"></div>
+                            <button class="btn-submit" id="LoginSubmit">Login</button>
+                            <a href="#" id="movetosignupFromLoginPage">sign Up</a>
+                    </div>  
+            </div>
+
+            <div class="Vol-dashboard noDisplay" id="vol-dashboard">
+                <div class="userProfile">
+                    <div class="profilePicContainer">
+                        <img class="profilePicMain" src="http://nwsid.net/wp-content/uploads/2015/05/dummy-profile-pic.png" alt="profile_pic" srcset="http://nwsid.net/wp-content/uploads/2015/05/dummy-profile-pic.png" id="Vol_Profile_Pic">
+                    </div>
+                    <div class="UserNameContainer">
+                        <h1 id="UserName">Temp Name</h1>
+                    </div>
+                    <div class="userCredentials">
+                        <h3 class="userCredentialsText">Social Points : <span class="points" id="socialpoints">20</span></h3>
+                        <h3 class="userCredentialsText">respect : <span class="points" id="respect">40</span></h3>
+                        <h3 class="userCredentialsText">Time Spent In rural events : <span class="points" id="timeSpentInRural">20 days</span></h3>
+                    </div>
+                </div>
+                <nav>
+                    <div class="toggle menu">&#9776;</div>
+                    <ul>
+                        <li><a href="#" id="nav_diary">Diary</a></li>
+                        <li><a href="#" id="nav_events">Events</a></li>
+                        <li><a href="#" id="appliedEvents">applied Events</a></li>
+                        <li><a href="#" id="compleatedEvents">Compleated Events</a></li>
+                    </ul>
+                </nav>
+                <div class="diaryContainer" id="diaryContainer">
+                    <div class="signUpHeadingContainer"><h1>Diary</h1></div>
+                    <button class="btn-submit" id="addDiaryEntry">add Entry</button>
+                    <div class="diaryEntryContainer" id="diaryEntryContainer">
+                        <div class="diaryEntry">
+                            <img class="diaryImg" src="http://images.newindianexpress.com/uploads/user/imagelibrary/2018/3/4/w600X300/Wide.jpg" alt="diary entry img" srcset="http://images.newindianexpress.com/uploads/user/imagelibrary/2018/3/4/w600X300/Wide.jpg">
+                            <div class="entrytxtContainer">
+                                <div class="titleContainer"><h3>Event Name [Date]</h3></div>
+                                <div class="entryContent"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non officiis natus harum iste possimus numquam corrupti, quae nisi sapiente accusamus. Beatae, alias. At quae itaque numquam nobis nihil voluptate eum.</p></div>
+                            </div>
+                        </div>
+                        <div class="diaryEntry">
+                            <img class="diaryImg" src="http://images.newindianexpress.com/uploads/user/imagelibrary/2018/3/4/w600X300/Wide.jpg" alt="diary entry img" srcset="http://images.newindianexpress.com/uploads/user/imagelibrary/2018/3/4/w600X300/Wide.jpg">
+                            <div class="entrytxtContainer">
+                                <div class="titleContainer"><h3>Event Name [Date]</h3></div>
+                                <div class="entryContent"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non officiis natus harum iste possimus numquam corrupti, quae nisi sapiente accusamus. Beatae, alias. At quae itaque numquam nobis nihil voluptate eum.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addEntryConttainer noDisplay" id="adddairyentry">
+                            <div class="signUpHeadingContainer"><h1>Add Diary Entry</h1></div>
+                            <div class="Txt-input-container"><input class="Txt-input" type="text" id="vol_diary_entryDate" placeholder="date as number (ex:12-3-2018 = 122032018)"></div>
+                            <div class="Txt-input-container"><textarea class="Txt-input" type="text" rows="5" style="overflow-y: scroll;" id="vol_diary_entryContent" placeholder="content"></textarea></div>
+                            <div class="Txt-input-container">
+                                <p>select Event</p>
+                                <select class="form-control" id="inputActiveEvent">
+                                    <option value="000000">-- personal -- </option>
+                                </select>
+                            </div>
+                            <button class="btn-submit" id="addDiaryEntrySubmit">submit</button>
+                    </div>
+                </div>
+
+                <div class="eventsListContainer noDisplay" id="eventsListContainer">
+                    <div class="signUpHeadingContainer"><h1>Events</h1></div>
+                </div>
+
+                <div class="eventsListContainer noDisplay" id="appliedEventsListContainer">
+                    <div class="signUpHeadingContainer"><h1>applied events</h1></div>
+                    <div class="eventContainer">
+                        <img class="eventImg" src="http://images.newindianexpress.com/uploads/user/imagelibrary/2018/3/4/w600X300/Wide.jpg" alt="diary entry img" srcset="http://images.newindianexpress.com/uploads/user/imagelibrary/2018/3/4/w600X300/Wide.jpg">
+                        <div class="entrytxtContainer">
+                            <div class="titleContainer" id="appliedeventName"><h4>Event Name [Date]</h4></div>
+                            <div class="titleContainer" id="appliedeventTime"><h4>time</h4></div>
+                            <div class="titleContainer" id="appliedeventDuration"><h4>diration</h4></div>
+                            <div class="titleContainer" id="appliedeventSLotsLeft"><h4>slots left</h4></div>
+                            <div class="titleContainer" id="appliedtotalSlots"><h4>total slots</h4></div>
+                            <div class="entryContent" id="appliedeventDiscription"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non officiis natus harum iste possimus numquam corrupti, quae nisi sapiente accusamus. Beatae, alias. At quae itaque numquam nobis nihil voluptate eum.</p></div>
+                            <button class="btn-submit" id="appliedeventUID">Register</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+        </div>
+    </body>
+</html>
